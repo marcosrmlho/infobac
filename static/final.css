@@ -1,10 +1,21 @@
-body{
+body {
     background-color: aliceblue;
     font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
 }
-h1, h2{
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #ffffff;
+}
+h1, h2 {
     text-align: center;
     font-weight: bold;
+    margin: 0;
+}
+h2.resultados {
+    margin-bottom: 10px;
 }
 form {
     display: flex;
@@ -20,15 +31,27 @@ form {
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #abffc7;
-    gap: 20px
+    gap: 20px;
 }
 .radio {
     background-color: #c1ffec;
     border: 1px #7bce97 solid;
 }
-input[type="submit"]{
+input[type="submit"] {
     max-width: 70px;
     background-color: #ffffff;
     border: 2px #427a55 solid;
     margin: 10px;
+}
+aside {
+    max-width: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #56a570;
+    padding: 4px;
+}
+.bacInfo > p {
+    margin-bottom: 0;
 }

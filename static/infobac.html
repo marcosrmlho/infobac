@@ -8,68 +8,98 @@
 </head>
 
 <body>
-    <h1>InfoBac</h1>
-    <h2>Selecione os filtros de acordo com testes bioquímicos prévios para identificar uma espécie de bactéria:</h2>
+    <main>
+        <h1>InfoBac</h1>
+        <h2>Selecione os filtros de acordo com testes bioquímicos prévios para identificar espécies e/ou gêneros entre as Enterobactérias:</h2>
 
-    <form action="final.js" method="get">
+        <form action="./" method="get">
 
-        <div class="options">
+            <div class="options">
 
-            <div class="radio">
-                <p>Forma:</p>
-                <label for="bacilo">Bacilo:</label>
-                <input type="radio" name="forma" id="bacilo" value="bacilo">
+                <div class="radio">
+                    <p>Forma:</p>
+                    <label for="bacilo">Bacilo:</label>
+                    <input type="radio" name="forma" id="bacilo" value="bacilo">
 
-                <label for="cocos">Cocos:</label>
-                <input type="radio" name="forma" id="cocos" value="cocos">
+                    <label for="cocos">Cocos:</label>
+                    <input type="radio" name="forma" id="cocos" value="cocos">
+                </div>
+
+                <div class="radio">
+                    <p>Gram:</p>
+                    <label for="gramPos">Positivo:</label>
+                    <input type="radio" name="gram" id="gramPos" value="positivo">
+            
+                    <label for="gramNeg">Negativo:</label>
+                    <input type="radio" name="gram" id="gramNeg" value="negativo">
+                </div>
+
+                <div class="radio">
+                    <p>Fermentação de carboidratos:</p>
+                    <label for="acidoGas">Produção de ácido e gás:</label>
+                    <input type="radio" name="fermentacao" id="acidoGas" value="acidoGas">
+            
+                    <label for="acido">Produção de ácido sem gás:</label>
+                    <input type="radio" name="fermentacao" id="acido" value="acido">
+
+                    <label for="semFermentacao">Sem fermentação:</label>
+                    <input type="radio" name="fermentacao" id="semFermentacao" value="semFermentacao">
+                </div>
+
+                <div class="radio">
+                    <p>Catalase:</p>
+                    <label for="catalasePos">Positiva:</label>
+                    <input type="radio" name="catalase" id="catalasePos" value="positiva">
+            
+                    <label for="catalaseNeg">Negativa:</label>
+                    <input type="radio" name="catalase" id="catalaseNeg" value="negativa">
+                </div>
+
+                
+                <div class="radio">
+                    <p>Oxidação e fermentação da glicose:</p>
+                    <label for="glicoseO">Oxida e não fermenta:</label>
+                    <input type="radio" name="glicose" id="glicoseO" value="glicoseO">
+                
+                    <label for="glicoseOF">Oxida e fermenta:</label>
+                    <input type="radio" name="glicose" id="glicoseOF" value="glicoseOF">
+                </div>
+                
+                <div class="radio">
+                    <p>Motilidade:</p>
+                    <label for="motilidadePos">Positiva:</label>
+                    <input type="radio" name="motilidade" id="motilidadePos" value="motilidadePos">
+            
+                    <label for="motilidadeNeg">Negativa:</label>
+                    <input type="radio" name="motilidade" id="motilidadeNeg" value="motilidadeNeg">
+                </div>
+
+                <div class="radio">
+                    <p>Indol:</p>
+                    <label for="indolPos">Positivo:</label>
+                    <input type="radio" name="indol" id="indolPos" value="indolPos">
+            
+                    <label for="indolNeg">Negativo:</label>
+                    <input type="radio" name="indol" id="indolNeg" value="indolNeg">
+                </div>
+
+                <div class="radio">
+                    <p>Produção de sulfeto de hidrogênio (H2S):</p>
+                    <label for="h2sPos">Positiva:</label>
+                    <input type="radio" name="h2s" id="h2sPos" value="h2sPos">
+            
+                    <label for="h2sNeg">Negativa:</label>
+                    <input type="radio" name="h2s" id="h2sNeg" value="h2sNeg">
+                </div>
             </div>
 
-            <div class="radio">
-                <p>Gram:</p>
-                <label for="gramPos">Positivo:</label>
-                <input type="radio" name="gram" id="gramPos" value="positivo">
-        
-                <label for="gramNeg">Negativo:</label>
-                <input type="radio" name="gram" id="gramNeg" value="negativo">
-            </div>
+            <input type="submit" value="Filtrar">
+        </form>
 
-            <div class="radio">
-                <p>Fermentação de carboidratos:</p>
-                <label for="acidoGas">Produção de ácido e gás:</label>
-                <input type="radio" name="fermentacao" id="acidoGas" value="acidoGas">
-        
-                <label for="acido">Produção de ácido sem gás:</label>
-                <input type="radio" name="fermentacao" id="acido" value="acido">
+        <h2 class="resultados">Resultados mais prováveis:</h2>
 
-                <label for="semFermentacao">Sem fermentação:</label>
-                <input type="radio" name="fermentacao" id="semFermentacao" value="semFermentacao">
-            </div>
-
-            <div class="radio">
-                <p>Catalase:</p>
-                <label for="catalasePos">Positiva:</label>
-                <input type="radio" name="catalase" id="catalasePos" value="positiva">
-        
-                <label for="catalaseNeg">Negativa:</label>
-                <input type="radio" name="catalase" id="catalaseNeg" value="negativa">
-            </div>
-
-            <div class="radio">
-                <p>Metabolismo energético:</p>
-                <label for="fermentador">Fermentador:</label>
-                <input type="radio" name="metabolismo" id="fermentador" value="fermentador">
-        
-                <label for="respiratorio">Respiratório:</label>
-                <input type="radio" name="metabolismo" id="respiratorio" value="respiratorio">
-
-                <label for="osdois">Fermentador e respiratório:</label>
-                <input type="radio" name="metabolismo" id="osdois" value="osdois">
-            </div>
-        </div>
-
-        <input type="submit" value="Filtrar">
-    </form>
-
+        <aside class="bacteria"></aside>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="final.js"></script>
 </body>
