@@ -1,3 +1,13 @@
+const testes = document.querySelector("#testes")
+
+testes.addEventListener("submit", (event) => {
+    event.preventDefault()
+    const testeDados = new FormData(event.target)
+    const testesBioquimicos = Object.fromEntries(testeDados)
+})
+
+
+
 const getBac = (imgSource, altImg, forma, gram, fermentacao, catalase, glicose, motilidade, indol, h2s) => {
     const bacTemplate =
     `
